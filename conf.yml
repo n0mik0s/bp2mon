@@ -1,0 +1,26 @@
+es_get:
+  nodes: []
+  port: 9200
+  use_ssl: True
+  verify_certs: True
+  ca_cert: /home/doopy/pyprojects/bp2mon/root-ca.pem
+  user: bpm-sqlmonitoring
+  password:
+  index: bpmsql-*
+  request_timeout: 15
+  scroll: 15s
+  size: 900
+
+es_put:
+  nodes: []
+  port: 9200
+  use_ssl: True
+  verify_certs: True
+  ca_cert: /home/doopy/pyprojects/bp2mon/root-ca.pem
+  pattern: bpm_anomaly
+  shards: 1
+  replicas: 1
+  user: bp2mon
+  password:
+  chunk_size: 1000
+  index: bpm_anomaly
